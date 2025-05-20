@@ -1,0 +1,338 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(25, 7, 84);
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(37, 9, 131);
+  position: fixed;
+  width: 100%;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.header__content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  color: white;
+  display: flex;
+}
+
+.header__title h1 {
+  font-weight: 200;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header__title h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* расстояние от текста */
+  height: 0.1px;
+  width: 0;
+  background-color: rgb(255, 255, 255, 0.8);
+  transition: width 0.4s ease;
+}
+
+.header__title h1:hover::after {
+  width: 100%;
+}
+
+.header__logo img {
+  width: 45px;
+  opacity: 0.95;
+}
+
+.header__btn button {
+  all: unset;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.2rem;
+  padding: 7px;
+  /* border: 1px solid rgba(255, 255, 255); */
+  border-radius: 7px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.header__btn button::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  bottom: 8px; /* расстояние от текста */
+  height: 0.1px;
+  width: 0;
+  background-color: rgb(255, 255, 255, 0.8);
+
+  transition: width 0.4s ease;
+}
+
+.header__btn button:hover::after {
+  width: 92%;
+}
+
+.header__btn button:hover {
+  color: white;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+main {
+  padding-top: 59px; /* чтобы не залезать под фиксированный header */
+}
+
+section.parallax {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1px;
+}
+
+.parallax .content {
+  font-size: 3rem;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.parallax--1 {
+  background: url("https://images.unsplash.com/photo-1442508748335-fde9c3f58fd9?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc0NzU4NDAzMXw&ixlib=rb-4.1.0&q=85&w=1920&quot;")
+    center / cover fixed;
+}
+.parallax--2 {
+  background: url("https://avatars.mds.yandex.net/i?id=5a1e98a3f4139f26b05b98062789558d_l-5518637-images-thumbs&n=13")
+    center / cover fixed;
+}
+.parallax--3 {
+  background: url("https://raw.githubusercontent.com/auth0/cosmos/master/assets/cosmos.png")
+    center / cover fixed;
+}
+
+.test {
+  width: 100%;
+  height: 100vh;
+}
+
+.countdown-container {
+  max-width: 100%;
+  text-align: center;
+  height: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #0b1a2b;
+  color: #e0e7ff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 100, 255, 0.6);
+}
+
+.countdown-timer {
+  font-size: 8rem;
+  font-weight: bold;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.mission-info {
+  width: 570px;
+  margin: 0 auto;
+}
+
+.mission-info h3 {
+  margin-top: 20px;
+  color: #9bbcff;
+}
+
+.mission-info p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.mission-info img {
+  margin-top: 10px;
+  display: block;
+}
+
+.question {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+.answers {
+  list-style: none;
+  padding: 0;
+}
+.answers li {
+  margin: 10px 0;
+}
+button {
+  background-color: #3b82f6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+button:hover {
+  background-color: #2563eb;
+}
+.result {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.moon-phase-widget {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #11182c;
+  color: white;
+  border-radius: 16px;
+  font-family: sans-serif;
+}
+
+/* Текущая фаза Луны */
+.current-moon-info {
+  text-align: center;
+  margin-bottom: 30px;
+  background: #1f2a44;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Навигация календаря */
+.calendar-header,
+#calendar-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.calendar-header button,
+#calendar-controls button {
+  background: #222b45;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Сетка календаря */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+/* Ячейки календаря */
+.calendar-grid div,
+#calendar td {
+  position: relative;
+  background-color: #0f0f1f;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  min-height: 80px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Номер дня */
+.calendar-grid .day {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+}
+
+/* Фоновая иконка Луны */
+.calendar-grid .moon {
+  font-size: 30px;
+  opacity: 0.3;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Сегодняшний день */
+.today {
+  background-color: #27468f !important;
+  border: 2px solid #62aaff !important;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Выбранный день */
+.selected {
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* Описание фазы Луны */
+.description,
+#phase-description {
+  margin-top: 20px;
+  background: #1f2a44;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Таблица календаря — fallback */
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
