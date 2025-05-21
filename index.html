@@ -28,11 +28,27 @@
       </header>
 
       <main>
+        <div class="main__home">
+          <div class="main__home-logo"><p>AstroFacts</p></div>
+          <div class="main__home-title">
+            <p>Что сокрыто от нас ?</p>
+          </div>
+          <div class="main__home-subtitle"><p>Может хочешь узнать?</p></div>
+        </div>
+
         <section class="parallax parallax--1">
-          <div class="content">Планеты и звёзды</div>
+          <div class="parallax__title">
+            <p>Космос начинается с любопытства</p>
+          </div>
+          <div class="parallax__subtitle">
+            <p>
+              В каждом из нас живёт исследователь. Сделай первый шаг — загляни
+              за горизонт звёзд.
+            </p>
+          </div>
         </section>
 
-        <div class="test">
+        <div class="main__stellarium">
           <iframe
             src="https://stellarium-web.org/"
             width="100%"
@@ -44,38 +60,65 @@
         </div>
 
         <section class="parallax parallax--2">
-          <div class="content">Черные дыры и галактики</div>
+          <div class="parallax__title">
+            <p>Будущее — за пределами Земли</p>
+          </div>
+          <div class="parallax__subtitle">
+            <p>
+              Технологии, планеты, жизнь во Вселенной — мы стоим на пороге новой
+              эры открытий.
+            </p>
+          </div>
         </section>
 
-        <div class="countdown-container">
-          <h2>
-            Обратный отсчёт до запуска Falcon 9 Block 5 — Axiom Mission 4 (Ax-4)
-          </h2>
-          <p><strong>Дата запуска:</strong> 8 июня 2025, 13:00 UTC</p>
-          <p>
-            <strong>Место запуска:</strong> SLC-39А, Космический центр Кеннеди,
-            Флорида
-          </p>
-
-          <div id="countdown" class="countdown-timer">Загрузка...</div>
-
-          <div class="mission-info">
-            <h3>О миссии</h3>
+        <div class="main__countdown">
+          <div class="main__countdown-title">
+            <h2>
+              Обратный отсчёт до запуска Falcon 9 Block 5 — Axiom Mission 4
+              (Ax-4)
+            </h2>
+          </div>
+          <div class="main__countrdown-date">
+            <p><strong>Дата запуска:</strong> 8 июня 2025, 13:00 UTC</p>
             <p>
-              Ax-4 — четвёртая частная миссия Axiom Space к МКС на борту
-              космического корабля SpaceX Crew Dragon. В экипаже: Пегги Уитсон,
-              Шубханшу Шукла, Славош Узнаньский и Тибор Капу.
+              <strong>Место запуска:</strong> SLC-39А, Космический центр
+              Кеннеди, Флорида
             </p>
-            <img
-              src="https://storage.googleapis.com/nextspaceflight/media/rockets/Falcon_9_Block_5.webp"
-              alt="Falcon 9 Block 5"
-              style="max-width: 100%; height: auto; border-radius: 8px"
-            />
+          </div>
+
+          <div id="countdown" class="main__countdown-timer">Загрузка...</div>
+
+          <div class="main__countdown-info">
+            <div class="info__pack">
+              <div class="info__pack-title"><h3>О миссии</h3></div>
+              <div class="info__pack-subtitle">
+                <p>
+                  Ax-4 — четвёртая частная миссия Axiom Space к МКС на борту
+                  космического корабля SpaceX Crew Dragon. В экипаже: Пегги
+                  Уитсон, Шубханшу Шукла, Славош Узнаньский и Тибор Капу.
+                </p>
+              </div>
+            </div>
+            <div class="info__img">
+              <img
+                src="https://storage.googleapis.com/nextspaceflight/media/rockets/Falcon_9_Block_5.webp"
+                alt="Falcon 9 Block 5"
+                style="max-width: 100%; height: auto; border-radius: 8px"
+              />
+            </div>
           </div>
         </div>
 
         <section class="parallax parallax--3">
-          <div class="content">Будущее космоса</div>
+          <div class="parallax__title">
+            <p>Смотри вверх — и думай шире</p>
+          </div>
+          <div class="parallax__subtitle">
+            <p>
+              Каждая звезда — это приглашение узнать больше. Мир вокруг нас
+              намного больше, чем кажется.
+            </p>
+          </div>
         </section>
 
         <div class="test2">
@@ -90,8 +133,15 @@
           <div id="result" class="result"></div>
         </div>
 
-        <section class="parallax parallax--3">
-          <div class="content">Будущее космоса</div>
+        <section class="parallax parallax--4">
+          <div class="parallax__title">
+            <p>
+              Луна, Марс, Галактика — всё начинается с одного взгляда в небо
+            </p>
+          </div>
+          <div class="parallax__subtitle">
+            <p>Начни своё путешествие в неизведанное. Космос ждёт тебя.</p>
+          </div>
         </section>
 
         <div id="moon-calendar">
@@ -105,6 +155,20 @@
             <button id="next-month">→</button>
           </div>
           <table id="calendar"></table>
+        </div>
+
+        <section class="parallax parallax--5">
+          <div class="parallax__title">
+            <p>Ты — часть Вселенной. Пора это осознать</p>
+          </div>
+          <div class="parallax__subtitle">
+            <p>Открывая тайны космоса, мы находим ответы о самих себе.</p>
+          </div>
+        </section>
+
+        <div id="space-news">
+          <h1>🚀 Новости космоса (перевод с английского)</h1>
+          <div id="news-container">Загрузка...</div>
         </div>
       </main>
 
@@ -148,4 +212,5 @@
   <script src="eventDate.js"></script>
   <script src="quizDate.js"></script>
   <script src="calendaryDate.js"></script>
+  <script src="scripts.js"></script>
 </html>

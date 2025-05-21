@@ -15,7 +15,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: rgb(25, 7, 84);
+  background-color: rgb(0, 0, 26);
   color: white;
 }
 
@@ -29,8 +29,10 @@ body {
   padding: 0;
 }
 
+/* header */
+
 header {
-  background-color: rgb(37, 9, 131);
+  background-color: rgb(0, 0, 26);
   position: fixed;
   width: 100%;
   padding: 5px 0;
@@ -114,18 +116,57 @@ header {
   /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
+/* main */
+
 main {
   padding-top: 59px; /* чтобы не залезать под фиксированный header */
 }
+
+/* main home */
+
+.main__home {
+  background: url("https://starwalk.space/assets/intro/background-city.jpeg")
+    center / cover;
+  width: 100%;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__home-logo {
+  font-size: 8rem;
+  color: #fff;
+  font-weight: 200;
+  padding-bottom: 40px;
+}
+
+.main__home-title p {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.main__home-subtitle p {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: dotted;
+  padding-bottom: 250px;
+}
+
+/* parallax */
 
 section.parallax {
   position: relative;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: start;
+  padding-left: 300px;
   justify-content: center;
   overflow: hidden;
   perspective: 1px;
+  gap: 15px;
 }
 
 .parallax .content {
@@ -135,27 +176,86 @@ section.parallax {
   padding: 2rem;
 }
 
+.parallax--1,
+.parallax--2,
+.parallax--3,
+.parallax--4,
+.parallax--5 {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  flex-direction: column;
+}
+
+.parallax--1::after,
+.parallax--2::after,
+.parallax--3::after,
+.parallax--4::after,
+.parallax--5::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 26, 0.4); /* Тёмное полупрозрачное наложение */
+  z-index: 1;
+}
+
+.parallax--1 > *,
+.parallax--2 > *,
+.parallax--3 > *,
+.parallax--4 > *,
+.parallax--5 > * {
+  position: relative;
+  z-index: 2;
+}
+
 .parallax--1 {
-  background: url("https://images.unsplash.com/photo-1442508748335-fde9c3f58fd9?ixid=M3wxMTI1OHwwfDF8cmFuZG9tfHx8fHx8fHx8MTc0NzU4NDAzMXw&ixlib=rb-4.1.0&q=85&w=1920&quot;")
+  background: url("https://avatars.mds.yandex.net/i?id=f677307c77ce9c5c0450881f4d8bd751_l-9029247-images-thumbs&n=13")
     center / cover fixed;
 }
 .parallax--2 {
-  background: url("https://avatars.mds.yandex.net/i?id=5a1e98a3f4139f26b05b98062789558d_l-5518637-images-thumbs&n=13")
+  background: url("https://i.pinimg.com/originals/e8/36/10/e83610c8b610e1fdd227d6b946f99132.jpg")
     center / cover fixed;
 }
 .parallax--3 {
-  background: url("https://raw.githubusercontent.com/auth0/cosmos/master/assets/cosmos.png")
+  background: url("https://i.pinimg.com/originals/66/21/62/662162b208d9707946d4efea1f5f89f0.jpg")
+    center / cover fixed;
+}
+.parallax--4 {
+  background: url("https://i.pinimg.com/originals/09/a0/cb/09a0cb13560064442b96daea2d47de4c.jpg")
+    center / cover fixed;
+}
+.parallax--5 {
+  background: url("https://i.pinimg.com/originals/b1/0b/f4/b10bf456977f6b636dcda734f32b5f58.jpg")
     center / cover fixed;
 }
 
-.test {
+.parallax__title {
+  font-size: 4rem;
+}
+
+.parallax__subtitle {
+  color: #9cacc3;
+  font-size: 1.5rem;
+  width: 75%;
+}
+
+/* stellarium */
+
+.main__stellarium {
   width: 100%;
   height: 100vh;
 }
 
-.countdown-container {
+/* countdown */
+
+.main__countdown {
   max-width: 100%;
-  text-align: center;
   height: 100%;
   margin: 20px auto;
   padding: 15px;
@@ -166,33 +266,44 @@ section.parallax {
   box-shadow: 0 0 15px rgba(0, 100, 255, 0.6);
 }
 
-.countdown-timer {
-  font-size: 8rem;
+.main__countdown-title,
+.main__countrdown-date {
+  text-align: center;
+}
+
+.main__countdown-timer {
+  font-size: 7rem;
   font-weight: bold;
   margin: 15px 0;
   text-align: center;
 }
 
-.mission-info {
+.main__countdown-info {
   width: 570px;
   margin: 0 auto;
+  display: flex;
 }
 
-.mission-info h3 {
+/* info */
+
+.info__pack-title h3 {
   margin-top: 20px;
-  color: #9bbcff;
+  color: #9cacc3;
+  font-size: 2rem;
 }
 
-.mission-info p {
-  font-size: 1rem;
+.info__pack-subtitle p {
+  font-size: 1.2rem;
   line-height: 1.4;
   margin-bottom: 10px;
 }
 
-.mission-info img {
+.info_img img {
   margin-top: 10px;
   display: block;
 }
+
+/* question */
 
 .question {
   margin-bottom: 20px;
@@ -335,4 +446,59 @@ button:hover {
 #calendar {
   width: 100%;
   border-collapse: collapse;
+}
+
+#space-news {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+#news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.news-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+.news-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.news-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.news-date {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.read-more {
+  margin-top: auto;
+  text-align: right;
+}
+.read-more a {
+  background-color: #0077ff;
+  color: #fff;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.read-more a:hover {
+  background-color: #005ccc;
 }
