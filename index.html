@@ -23,7 +23,23 @@
             </div>
             <div class="header__text"><h1>AstroFacts</h1></div>
           </div>
-          <div class="header__btn"><button>Оставить Отзыв</button></div>
+          <div class="header__btn">
+            <button onclick="location.href='#mainStellarium'">
+              Звездные карта
+            </button>
+            <button onclick="location.href='#mainCountdown'">
+              Собитые космоса
+            </button>
+            <button onclick="location.href='#quiz-main'">
+              Кто ты из планет?
+            </button>
+            <button onclick="location.href='#mainMoonPhase'">
+              Лунный календарь
+            </button>
+            <button onclick="location.href='#space-news'">
+              Новости космоса
+            </button>
+          </div>
         </div>
       </header>
 
@@ -48,7 +64,7 @@
           </div>
         </section>
 
-        <div class="main__stellarium">
+        <div id="mainStellarium" class="main__stellarium">
           <iframe
             src="https://stellarium-web.org/"
             width="100%"
@@ -71,7 +87,7 @@
           </div>
         </section>
 
-        <div class="main__countdown">
+        <div id="mainCountdown" class="main__countdown">
           <div class="main__countdown-title">
             <h2>
               Обратный отсчёт до запуска Falcon 9 Block 5 — Axiom Mission 4
@@ -148,7 +164,7 @@
           </div>
         </section>
 
-        <div class="moon-phase-widget">
+        <div id="mainMoonPhase" class="moon-phase-widget">
           <div class="current-moon-info">
             <h2>Сегодня: <span id="current-date"></span></h2>
             <p>Время: <span id="current-time"></span></p>
