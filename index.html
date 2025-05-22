@@ -121,14 +121,18 @@
           </div>
         </section>
 
-        <div class="test2">
-          <h1>Тест на характер: Кто ты из планет?</h1>
+        <div id="quiz-main" class="main__quizzes">
+          <div class="main__quizzes-title">
+            <p>Кто ты из планет?</p>
+          </div>
 
-          <div id="quiz-container">
+          <div id="quiz-container" class="main__quizzes-container">
             <!-- Вопросы будут тут -->
           </div>
 
-          <button id="next-btn">Далее</button>
+          <div class="main__quizzes-btn">
+            <button id="next-btn">Далее</button>
+          </div>
 
           <div id="result" class="result"></div>
         </div>
@@ -166,9 +170,11 @@
           </div>
         </section>
 
-        <div id="space-news">
-          <h1>🚀 Новости космоса (перевод с английского)</h1>
-          <div id="news-container">Загрузка...</div>
+        <div id="space-news" class="main__news">
+          <div class="main__news-title">
+            <p>Новости Космоса</p>
+          </div>
+          <div id="news-container" class="main__news-content">Загрузка...</div>
         </div>
       </main>
 
@@ -187,26 +193,29 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".parallax--1 .content", {
-      scrollTrigger: {
-        trigger: ".parallax--1",
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-      },
-      y: 100,
-      opacity: 0,
-    });
+    const parallaxItems = [
+      { selector: ".parallax--1", y: 100 },
+      { selector: ".parallax--2", y: -100 },
+      { selector: ".parallax--3", y: 100 },
+      { selector: ".parallax--4", y: -100 },
+      { selector: ".parallax--5", y: 100 },
+    ];
 
-    gsap.from(".parallax--2 .content", {
-      scrollTrigger: {
-        trigger: ".parallax--2",
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-      },
-      y: -100,
-      opacity: 0,
+    parallaxItems.forEach(({ selector, y }) => {
+      gsap.from(
+        `${selector} .content, ${selector} .parallax__title, ${selector} .parallax__subtitle`,
+        {
+          scrollTrigger: {
+            trigger: selector,
+            start: "top center",
+            end: "bottom center",
+            scrub: true,
+          },
+          y: y,
+          opacity: 0,
+          ease: "none",
+        }
+      );
     });
   </script>
   <script src="eventDate.js"></script>
