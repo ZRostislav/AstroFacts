@@ -148,17 +148,25 @@
           </div>
         </section>
 
-        <div id="moon-calendar">
-          <div id="current-info">
-            <h2 id="date-title"></h2>
-            <p id="phase-description"></p>
+        <div class="moon-phase-widget">
+          <div class="current-moon-info">
+            <h2>Сегодня: <span id="current-date"></span></h2>
+            <p>Время: <span id="current-time"></span></p>
+            <p>
+              Фаза Луны: <span id="today-moon-emoji"></span>
+              <span id="today-moon-name"></span>
+            </p>
           </div>
-          <div id="calendar-controls">
-            <button id="prev-month">←</button>
-            <span id="month-year"></span>
-            <button id="next-month">→</button>
+
+          <div class="moon-calendar">
+            <div class="calendar-header">
+              <button id="prev-month">«</button>
+              <h2 id="calendar-month-year"></h2>
+              <button id="next-month">»</button>
+            </div>
+            <div class="calendar-grid" id="calendar-grid"></div>
+            <div id="phase-description" class="description"></div>
           </div>
-          <table id="calendar"></table>
         </div>
 
         <section class="parallax parallax--5">
