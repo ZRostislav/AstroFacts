@@ -203,12 +203,31 @@
       </main>
 
       <footer>
-        <h2>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
-          illum architecto, ex harum facilis, modi consequatur aliquid
-          excepturi, quis molestiae ullam reiciendis molestias exercitationem
-          ipsam natus eaque sint dolorem quam!
-        </h2>
+        <div class="footer__content">
+          <div class="footer__title">
+            <div class="footer__logo">
+              <img src="/data/images/logo.png" alt="logo" />
+            </div>
+            <div class="footer__text"><h1>AstroFacts</h1></div>
+          </div>
+          <div class="footer__btn">
+            <button onclick="location.href='#mainStellarium'">
+              Звездные карта
+            </button>
+            <button onclick="location.href='#mainCountdown'">
+              Собитые космоса
+            </button>
+            <button onclick="location.href='#quiz-main'">
+              Кто ты из планет?
+            </button>
+            <button onclick="location.href='#mainMoonPhase'">
+              Лунный календарь
+            </button>
+            <button onclick="location.href='#space-news'">
+              Новости космоса
+            </button>
+          </div>
+        </div>
       </footer>
     </div>
   </body>
@@ -242,6 +261,41 @@
       );
     });
   </script>
+  <!-- <script>
+    function updateCalendarPadding() {
+      const calendar = document.querySelector(".calendar-grid");
+      const firstCell = calendar?.querySelector("div");
+
+      if (calendar && firstCell) {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 1840) {
+          const cellWidth = parseFloat(getComputedStyle(firstCell).width);
+          const factor = 2.27;
+          const calculatedPadding = cellWidth * factor;
+
+          calendar.style.setProperty(
+            "padding-left",
+            `${calculatedPadding}px`,
+            "important"
+          );
+          calendar.style.setProperty(
+            "padding-right",
+            `${calculatedPadding}px`,
+            "important"
+          );
+        } else {
+          // Сбрасываем стили при меньшем разрешении
+          calendar.style.removeProperty("padding-left");
+          calendar.style.removeProperty("padding-right");
+        }
+      }
+    }
+
+    window.addEventListener("load", updateCalendarPadding);
+    window.addEventListener("resize", updateCalendarPadding);
+  </script> -->
+
   <script src="eventDate.js"></script>
   <script src="quizDate.js"></script>
   <script src="calendaryDate.js"></script>
