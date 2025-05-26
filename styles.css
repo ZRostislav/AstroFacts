@@ -23,6 +23,10 @@ body {
   overflow-x: hidden;
 }
 
+input {
+  display: none;
+}
+
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -30,6 +34,56 @@ body {
 }
 
 /* media */
+
+@media (max-width: 1440px) {
+  .header__content {
+    justify-content: center !important;
+  }
+
+  .header__btn {
+    display: none !important;
+  }
+
+  .main__countdown-timer {
+    font-size: 3.5rem !important;
+  }
+
+  .current-moon-info {
+    padding: 10px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .calendar-grid {
+    padding: 20px 1% !important;
+  }
+
+  .footer__btn button {
+    font-size: 0.7rem !important;
+  }
+
+  .main__quizzes-btn button {
+    font-size: 1rem !important;
+    padding: 10px 0px !important;
+  }
+
+  .answer-1,
+  .answer-2,
+  .answer-3,
+  .answer-4 {
+    font-size: 0.8rem;
+  }
+
+  .answer-1:hover,
+  .answer-1:has(input:checked),
+  .answer-2:hover,
+  .answer-2:has(input:checked),
+  .answer-3:hover,
+  .answer-3:has(input:checked),
+  .answer-4:hover,
+  .answer-4:has(input:checked) {
+    font-size: 0.7rem !important;
+  }
+}
 
 @media (max-width: 768px) {
   .header__content {
@@ -42,6 +96,42 @@ body {
 
   .main__countdown-timer {
     font-size: 3.5rem !important;
+  }
+
+  .current-moon-info {
+    padding: 10px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .calendar-grid {
+    padding: 20px 1% !important;
+  }
+
+  .footer__btn button {
+    font-size: 0.7rem !important;
+  }
+
+  .main__quizzes-btn button {
+    font-size: 1rem !important;
+    padding: 10px 0px !important;
+  }
+
+  .answer-1,
+  .answer-2,
+  .answer-3,
+  .answer-4 {
+    font-size: 0.8rem;
+  }
+
+  .answer-1:hover,
+  .answer-1:has(input:checked),
+  .answer-2:hover,
+  .answer-2:has(input:checked),
+  .answer-3:hover,
+  .answer-3:has(input:checked),
+  .answer-4:hover,
+  .answer-4:has(input:checked) {
+    font-size: 0.7rem !important;
   }
 }
 
@@ -521,7 +611,7 @@ section.parallax {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 8px;
-  padding: 20px 30%;
+  padding: 20px 28%;
 }
 
 .calendar-grid div {
@@ -530,11 +620,12 @@ section.parallax {
   border-radius: 8px;
   overflow: hidden;
   height: 105px;
-  width: 118.14px;
+  /* width: 118.14px; */
+  width: 100%;
 }
 
 .calendar-grid .day {
-  font-size: 35px;
+  font-size: 2.5rem;
   z-index: 3;
   justify-content: center;
   align-items: center;
@@ -544,7 +635,7 @@ section.parallax {
 }
 
 .calendar-grid .moon {
-  font-size: 70px;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -570,7 +661,7 @@ section.parallax {
   border-radius: 12px;
   text-align: center;
   font-size: 16px;
-  width: 875px;
+  max-width: 875px;
   margin: 0 auto;
 }
 
