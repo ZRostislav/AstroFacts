@@ -38,10 +38,12 @@ input {
 @media (max-width: 1440px) {
   .header__content {
     justify-content: center !important;
+    max-width: 90% !important;
+    flex-direction: column !important;
   }
 
-  .header__btn {
-    display: none !important;
+  .header__btn button {
+    font-size: 0.9rem !important;
   }
 
   .main__countdown-timer {
@@ -132,6 +134,113 @@ input {
   .answer-4:hover,
   .answer-4:has(input:checked) {
     font-size: 0.7rem !important;
+  }
+}
+
+@media (max-width: 670px) {
+  footer {
+    display: none !important;
+  }
+
+  .main__countrdown-date {
+    font-size: 0.8rem !important;
+  }
+
+  .main__countdown-title {
+    font-size: 0.4rem !important;
+  }
+
+  .main__home-logo {
+    font-size: 3rem !important;
+  }
+
+  .main__home-title p {
+    font-size: 1.5rem !important;
+  }
+
+  .main__home-subtitle p {
+    font-size: 1rem !important;
+  }
+
+  .parallax__title {
+    font-size: 2.5rem !important;
+  }
+
+  .header__content {
+    justify-content: center !important;
+  }
+
+  .header__btn {
+    display: none !important;
+  }
+
+  .main__countdown-timer {
+    font-size: 1.5rem !important;
+  }
+
+  .main__countdown-info {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+
+  .current-moon-info {
+    padding: 10px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .calendar-grid {
+    padding: 20px 1% !important;
+  }
+
+  .footer__btn button {
+    font-size: 0.7rem !important;
+  }
+
+  .main__quizzes-btn button {
+    font-size: 1rem !important;
+    padding: 10px 0px !important;
+    margin: 30px auto !important;
+    width: 50% !important;
+  }
+
+  .answer-1,
+  .answer-2,
+  .answer-3,
+  .answer-4 {
+    font-size: 0.8rem;
+  }
+
+  .answer-1:hover,
+  .answer-1:has(input:checked),
+  .answer-2:hover,
+  .answer-2:has(input:checked),
+  .answer-3:hover,
+  .answer-3:has(input:checked),
+  .answer-4:hover,
+  .answer-4:has(input:checked) {
+    font-size: 0.7rem !important;
+  }
+
+  .main__quizzes {
+    height: 100% !important;
+  }
+
+  .quiz__answers {
+    grid-template-columns: 1fr !important;
+  }
+
+  .calendar-grid div {
+    height: 40px !important;
+    width: 100% !important;
+  }
+
+  .calendar-grid .moon {
+    font-size: 1.5rem !important;
+    top: -2px !important;
+  }
+
+  .calendar-grid .day {
+    font-size: 1rem !important;
   }
 }
 
